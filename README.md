@@ -27,16 +27,16 @@ composer require tymon/jwt-auth
 php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
 ```
 It will copy a file **jwt.php** inside **/config folder**.
-### Step 5: Run Migration
-```
-php artisan migrate
-```
-It will migrate all pending migrations of application.
-### Step 6: Generate JWT Secret Token
+### Step 5: Generate JWT Secret Token
 ```
 php artisan jwt:secret
 ```
 It updates **.env** file with jwt secret key.
+### Step 6: Run Migration
+```
+php artisan migrate
+```
+It will migrate all pending migrations of application.
 ### Step 7: Update Model User.php
 Open **User.php** file from **/app/Models** folder.
 ```
