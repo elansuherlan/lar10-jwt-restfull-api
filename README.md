@@ -1,6 +1,11 @@
 ### Step 1: Install Laravel
+Do this command if you want to install on current directory without create new directory:
 ```
 composer create-project laravel/laravel .
+```
+If you want to create with new directory, do this command:
+```
+composer create-project laravel/laravel {your_directory}
 ```
 ### Step 2: Install JWT (JSON Web Token)
 ```
