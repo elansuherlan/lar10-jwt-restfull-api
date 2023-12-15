@@ -59,3 +59,22 @@ public function getJWTCustomClaims()
 php artisan make:controller Api/ApiController
 ```
 It will create a file named **ApiController.php** inside **/app/Http/Controllers** folder.
+Please create your own function inside **ApiController.php** according your needed.
+### Step 9: Update Route for API
+Open api.php file from /routes folder. Add these routes into it,
+```
+//...
+use App\Http\Controllers\Api\ApiController;
+
+Route::post("register", [ApiController::class, "register"]);
+Route::post("login", [ApiController::class, "login"]);
+
+Route::group([
+    "middleware" => ["auth:api"]
+], function() {
+    Route::get("profile", [ApiController::class, "profile"]);
+    Route::get("refresh", [ApiController::class, "refreshToken"]);
+    Route::get("logout", [ApiController::class, "logout"]);
+});
+```
+
