@@ -49,3 +49,8 @@ public function getJWTCustomClaims()
   return [];
 }
 ```
+### Step 8: Create ApiController.php
+```
+php artisan make:controller Api/ApiController
+```
+It will create a file named **ApiController.php** inside **/app/Http/Controllers** folder.
